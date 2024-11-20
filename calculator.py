@@ -1,31 +1,44 @@
- // Function to add two numbers
- function add(a, b) {
-   return a + b;
- }
+def add(x, y):
+return x + y
 
- // Function to subtract two numbers
- function subtract(a, b) {
-   return a - b;
- }
+def subtract(x, y):
+return x - y
 
- // Function to multiply two numbers
- function multiply(a, b) {
-   return a * b;
- }
+def multiply(x, y):
+return x * y
 
- // Function to divide two numbers
- function divide(a, b) {
-   if (b === 0) {
-     return "Error: Division by zero";
-   }
-   return a / b;
- }
+def divide(x, y):
+if y == 0:
+   return "Error! Division by zero."
+else:
+   return x / y
 
- // Declare and assign values to num1 and num2
- var num1 = 5;
- var num2 = 3;
+print("Select operation:")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
 
- console.log("Addition:", add(num1, num2));
- console.log("Subtraction:", subtract(num1, num2));
- console.log("Multiplication:", multiply(num1, num2));
- console.log("Division:", divide(num1, num2));
+while True:
+   choice = input("Enter choice(1/2/3/4): ")
+
+   if choice in ('1', '2', '3', '4'):
+     num1 = float(input("Enter first number: "))
+     num2 = float(input("Enter second number: "))
+
+if choice == '1':
+       print(num1, "+", num2, "=", add(num1, num2))
+
+elif choice == '2':
+       print(num1, "-", num2, "=", subtract(num1, num2))
+
+elif choice == '3':
+       print(num1, "*", num2, "=", multiply(num1, num2))
+
+elif choice == '4':
+       print(num1, "/", num2, "=", divide(num1, num2))
+break
+
+else:
+
+print("Invalid Input")
